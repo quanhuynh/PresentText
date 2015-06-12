@@ -1,0 +1,16 @@
+::selection {
+    background: #E0E0FF;
+}
+.layering {
+  position: fixed;
+  z-index: 999;
+  background-color: black;
+  top: 0;
+  left: 0;
+  opacity: .9;
+  height: 100%;
+  pointer-events: none;
+  transition: ease-in 0.3s;
+}
+.layering-right {right: 0}
+.layering-bottom {bottom: 0;}

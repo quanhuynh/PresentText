@@ -14,13 +14,12 @@
     {
       "matches": ["<all_urls>"],
       "js": ["jquery-2.1.4.min.js"],
-      "css": ["border-styles.css"]
+      "css": ["layer-styles.css"]
     }
   ],
 
   "web_accessible_resources": [
-    "border-template.html",
-    "border-styles.css"
+    "layer-template.html"
   ],
 
   "permissions": [

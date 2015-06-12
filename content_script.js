@@ -1,29 +1,29 @@
-if ($(".border").length > 0) {
-  $(".border").remove();
+if ($(".layering").length > 0) {
+  $(".layering").remove();
   console.log("removed");
 }
 else {
-	$.get(chrome.extension.getURL('border-template.html'), function(data) {
+	$.get(chrome.extension.getURL('layer-template.html'), function(data) {
     $(data).appendTo('body');
 
     console.log("added");
 
-		var borderLeft = $('.border-left'),
-		    borderRight = $('.border-right'),
-		    borderTop = $('.border-top'),
-		    borderBottom = $('.border-bottom');
+		var layeringLeft = $('.layering-left'),
+		    layeringRight = $('.layering-right'),
+		    layeringTop = $('.layering-top'),
+		    layeringBottom = $('.layering-bottom');
 
 		var textPadding = 10; //define text-padding here
 
 		function adaptTo(selected) {
-	    borderLeft.css({width: selected.left - textPadding});
-	    borderRight.css({left: selected.left + selected.width + textPadding});
-	    borderTop.css({
+	    layeringLeft.css({width: selected.left - textPadding});
+	    layeringRight.css({left: selected.left + selected.width + textPadding});
+	    layeringTop.css({
 	        width: selected.width + 2*textPadding,
 	        left: selected.left - textPadding,
 	        height: selected.top - textPadding
 	    });
-	    borderBottom.css({
+	    layeringBottom.css({
 	        top: selected.top + selected.height + textPadding,
 	        left: selected.left - textPadding,
 	        width: selected.width + 2*textPadding
